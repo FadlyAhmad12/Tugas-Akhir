@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FGS Travelling</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+header{
+    background: url(a.jpg) center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem ;
+}
+nav {
+    background-color: rgb(113, 212, 245);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo a {
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+.menu li {
+    margin: 0 1rem;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.menu li a:hover {
+    color: #ffcc00;
+}
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+.destinasi {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+.destinasi h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.destinasi-item {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin:0.5rem;
+    max-width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.destinasi-item:hover {
+    transform: scale(1.1);
+}
+.destinasi-item img {
+    max-width: 100%;
+    height:auto;
+    border-radius: 5px;
+}
+.destinasi-item h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.destinasi-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.destinasi-item button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.destinasi-item button:hover {
+    background-color: rgb(203, 247, 133);
+    color: white;
+}
+.paket-wisata {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.paket-wisata h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+.paket-wisata-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.paket-wisata-item {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    flex: 1;
+    width: calc(33.33% - 1rem);
+    margin-bottom: 1rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.paket-wisata-item:hover {
+    transform: scale(1.1);
+}
+.paket-wisata-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.paket-wisata-item h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.paket-wisata-item p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.paket-wisata-item button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.paket-wisata-item button:hover {
+    background-color: rgb(203, 247, 133);
+    color: white;
+}
+.kontak {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.kontak h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+.kontak-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.kontak-info {
+    flex: 1;
+    background-color: #fdfcab;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+    
+    
+</style>  
+        <header>
+            <h1>Travelling yukkss</h1>
+        </header>
+        <nav>
+            <div class="navbar">
+              <div class="logo">
+                <a href="#">Travelling yukkss</a>
+              </div>
+              <ul class="menu">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Destinasi</a></li>
+                <li><a href="#">Paket Wisata</a></li>
+                <li><a href="#">Kontak</a></li>
+              </ul>
+            </div>
+        </nav>  
+        <main>
+            <section class="destinasi">
+                <h2>Destinasi Populer</h2>
+                <div class="destinasi-item">
+                    <img src="jawa.jpg" alt="Destinasi 1">
+                    <h3>Destinasi 1</h3>
+                    <p>Karimun Jawa culture.</p>
+                    <button><a href="karimun.html">Detail</a></button>
+                </div>
+                <div class="destinasi-item">
+                    <img src="jogja.jpg" alt="Destinasi 1">
+                    <h3>Destinasi 2</h3>
+                    <p>jogja culture.</p>
+                    <button><a href="jogja.html">Detail</a></button>
+                </div>
+                <div class="destinasi-item">
+                    <img src="dd.jpg" alt="Destinasi 1">
+                    <h3>Destinasi 3</h3>
+                    <p>Dieng culture.</p>
+                    <button><a href="dieng.html">Detail</a></button>
+                </div>
+
+            </section>
+            <section class="paket-wisata">
+                <h2>Paket Wiata</h2>
+                <div class="paket-wisata-container">
+                    <div class="paket-wisata-item">
+                        <img src="1.jpg"alt="Paket Wisata 1">
+                        <h3>KARIMUN JAWA</h3>
+                        <p>Harga: Rp.1.400.000</p>
+                        <p>Day: 3 hari</p>
+                        <button>Detail</button>
+                    </div>
+                    <div class="paket-wisata-item">
+                        <img src="balii.jpg"alt="Paket Wisata 1">
+                        <h3>BALI</h3>
+                        <p>Harga: Rp.1.800.000</p>
+                        <p>Day: 5 hari</p>
+                        <button>Detail</button>
+                    </div>
+                    <div class="paket-wisata-item">
+                        <img src="download.jpg"alt="Paket Wisata 1">
+                        <h3>PAPUA</h3>
+                        <p>Harga: Rp.2.000.000</p>
+                        <p>Day: 7 hari</p>
+                        <button>Detail</button>
+                    </div>
+                </div>
+            </section>
+        </main>    
+        <section class="kontak">
+            <h2>Hubungi Kami</h2>
+            <div class="Kontak-container">
+                <div class="kontak-info">
+                    <div class="kontak-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="kontak-text">
+                            <p>Alamat:</p>
+                            <p>Jalan Sudirman 2, Kota Semarang</p>
+                        </div>
+                    </div>
+                    <div class="kontak-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="kontak-text">
+                            <p>Telepon:</p>
+                            <p>call: (+62)8423567785</p>
+                            <p>WA: 081327895342</p>
+                        </div>
+                    </div>
+                    <div class="kontak-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="kontak-text">
+                            <p>Email:</p>
+                            <p>Travelling123@gmail.com<div class="kontak-item">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+</body>
+</html>
