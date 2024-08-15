@@ -1,11 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berhasil....</title>
+    <title>Konfirmasi Pembayaran</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Transaksi Berhasil</p>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmationMessage {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7f3fe;
+    color: #31708f;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+}
+
+    </style>
+    <div class="container">
+        <h1>Konfirmasi Pembayaran</h1>
+        <form id="paymentForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="amount">Jumlah Pembayaran:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="paymentMethod">Metode Pembayaran:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="bank_transfer">Transfer Bank</option>
+                <option value="credit_card">Kartu Kredit</option>
+                <option value="e_wallet">Dompet Digital</option>
+            </select>
+
+            <button type="submit">Konfirmasi Pembayaran</button>
+        </form>
+        <div id="confirmationMessage" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
